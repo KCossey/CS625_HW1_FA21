@@ -201,13 +201,8 @@ Jersey Village, TX - near my grandparents’ house.
     embedded from another notebook. Click on the 3 dots next to that
     chart and choose ‘Download PNG’. Insert the PNG into your report.*
 
-![Observable Weather Chart-JV](WeatherChartBlank.png) *Cannot download
-png from Observable notebook - the file saves as an empty file that
-can’t be opened by anything. So far, Google has no useful information.
-Come back to this Monday morning. In the meantime, screenshot inserted
-instead.*
-
-![Observable Weather Chart-JV\_SS](WeatherChartScreenshot.png)
+![Observable Weather Chart-JV](WeatherChart.png) *Note to self - can’t
+do this in Firefox, must use Edge.*
 
 ### Charting with Vega-Lite
 
