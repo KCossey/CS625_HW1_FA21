@@ -154,7 +154,7 @@ Another example, `count()`
 
 *Every report must list the references that you consulted while completing the assignment. If you consulted a webpage, you must include the URL.*
 
-* Reference 1: R Markdown basics, [https://bookdown.org/yihui/rmarkdown/installation.html](https://bookdown.org/yihui/rmarkdown/installation.html)
-* Reference 2: R Markdown Reference guide, [https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
-* Reference 3: R Markdown code chunks, [https://www.dataquest.io/blog/r-markdown-guide-cheatsheet/](https://www.dataquest.io/blog/r-markdown-guide-cheatsheet/)
-* Reference 4: Using R code in a Jupyter notebook, [https://nbviewer.jupyter.org/github/ipython/ipython/blob/1.x/examples/notebooks/Cell%20Magics.ipynb](https://nbviewer.jupyter.org/github/ipython/ipython/blob/1.x/examples/notebooks/Cell%20Magics.ipynb)
+* Reference 1: R Markdown basics: [https://bookdown.org/yihui/rmarkdown/installation.html](https://bookdown.org/yihui/rmarkdown/installation.html)
+* Reference 2: R Markdown Reference guide: [https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+* Reference 3: R Markdown code chunks: [https://www.dataquest.io/blog/r-markdown-guide-cheatsheet/](https://www.dataquest.io/blog/r-markdown-guide-cheatsheet/)
+* Reference 4: Using R code in a Jupyter notebook: [https://nbviewer.jupyter.org/github/ipython/ipython/blob/1.x/examples/notebooks/Cell%20Magics.ipynb](https://nbviewer.jupyter.org/github/ipython/ipython/blob/1.x/examples/notebooks/Cell%20Magics.ipynb)
