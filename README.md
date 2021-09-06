@@ -3,3 +3,6 @@ Getting started - Due Sept 9
 
 ### Sept 5, 2021
 Completed all sections until Vega-Lite notebook. Note: Observable Notebook can't save PNGs when used in Firefox. Use Edge. 
+
+### Sept 6, 2021
+Completed & ready to grade @weiglemc

@@ -63,11 +63,13 @@ view(test)
 
 #### Data Visualization Exercises
 
-1.  (Q2) *How many rows are in mpg? How many columns?* 234 rows, 11
-    columns
+1.  (Q2) *How many rows are in mpg? How many columns?*
 
-2.  (Q3) \*What does the ‘drv’ variable describe? Drive train - 4-wheel,
-    front wheel, rear wheel
+234 rows, 11 columns
+
+2.  (Q3) *What does the ‘drv’ variable describe?*
+
+Drive train - 4-wheel, front wheel, rear wheel
 
 3.  (Q4) *Make a scatterplot of hwy vs cyl.*
 
@@ -78,9 +80,9 @@ ggplot(data = mpg) +
 
 ![](Cossey_HW1_Sep9_21_Mkdn_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
-Not particularly useful - ‘cyl’ is a ordinal (integer), not continuous
-(numeric) variable. Could be useful to check for outliers, since higher
-cylinder numbers have some relationship to lower highway mpg.
+Not particularly useful - `cyl` is an ordinal, not continuous (numeric)
+variable. Could be useful to check for outliers, since higher cylinder
+numbers have some relationship to lower highway mpg.
 
 #### Workflow: basics Exercises
 
@@ -164,13 +166,19 @@ filter(diamonds, carat > 3)
 
 1.  *What conclusions can you draw from the chart?*
 
+**East Region Sales**
+
 -   Bookcases were not profitable until 2021, and even then they were
     barely profitable.
+-   Tables have never been profitable.
 -   Copiers have been increasing in profitability.
 -   Envelopes, fasteners, and labels are consistently the lowest sellers
     and are only marginally profitable.
 -   Phones had a sharp spike in sales in 2021, but still generate
-    approximately the same amount of profit as in all previous years.
+    approximately the same rate of profit as in all previous years.
+-   If the company is concerned with focusing only on high-return items,
+    they should consider discontinuing tables, bookcases, labels,
+    envelopes, and fasteners in the Eastern region.
 
 ## Observable and Vega-Lite
 
@@ -188,8 +196,8 @@ The detailed forecast sentences in the image were removed.
     or use Shift-Return to run your change. What happens? How about
     `markPoint()`?*
 
-The command “.mark” is the shape of the points on the scatterplot.
-“.markSquare” creates square points, and “.markPoint” is a circle
+The command `.mark` is the shape of the points on the scatterplot.
+`.markSquare` creates square points, and `.markPoint` is a circle
 outline.
 
 3.  *Under “Pick a location, see the weather forecast”, pick a location
@@ -209,22 +217,45 @@ do this in Firefox, must use Edge.*
 `markCircle()`
 
 1.  *Pass an option of `{ size: 200 }` to `markCircle()`.*
+
+The size of the circles increased.
+
 2.  *Try `markSquare` instead of `markCircle`.*
+
+The points are solid squares.
+
 3.  *Try `markPoint({ shape: 'diamond' })`.*
+
+The points are diamond outlines.
 
 `vl.x().fieldQ("Horsepower")`, …
 
 1.  *Change `Horsepower` to `Acceleration`*
+
+X-Axis changed to acceleration.
+
 2.  *Swap what fields are displayed on the x- and y-axis*
+
+Acceleration and Horsepower switched axes.
 
 `vl.tooltip().fieldN("Name")`
 
 1.  *Change `Name` to `Origin`.*
 
-Another example, `count()`
+Tooltips change to show the area of origin for the datapoint.
 
-1.  *Remove the `vl.y().fieldN("Origin")` line.*
-2.  *Replace `count()` with `average("Miles_per_Gallon")`.*
+`count()`
+
+2.  *Remove the `vl.y().fieldN("Origin")` line.*
+
+Shows total number of observations in the dataset - no disaggregation by
+characteristics.
+
+3.  *Replace `count()` with `average("Miles_per_Gallon")`.*
+
+I put back in the `vl.y().fieldN("Origin")` line first. The
+`average("Miles_per_Gallon")` gave the average MPG for cars produced in
+each of the three areas.
 
 ## References
 
@@ -232,11 +263,11 @@ Another example, `count()`
 completing the assignment. If you consulted a webpage, you must include
 the URL.*
 
--   Reference 1: R Markdown basics,
+-   Reference 1: R Markdown basics:
     <https://bookdown.org/yihui/rmarkdown/installation.html>
--   Reference 2: R Markdown Reference guide,
+-   Reference 2: R Markdown Reference guide:
     <https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf>
--   Reference 3: R Markdown code chunks,
+-   Reference 3: R Markdown code chunks:
     <https://www.dataquest.io/blog/r-markdown-guide-cheatsheet/>
--   Reference 4: Using R code in a Jupyter notebook,
+-   Reference 4: Using R code in a Jupyter notebook:
     <https://nbviewer.jupyter.org/github/ipython/ipython/blob/1.x/examples/notebooks/Cell%20Magics.ipynb>
