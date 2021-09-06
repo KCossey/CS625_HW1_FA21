@@ -48,31 +48,63 @@ view(test)
 #### Data Visualization Exercises
 
 1. (Q2) *How many rows are in mpg? How many columns?*
+        234 rows, 11 columns
 
-1. (Q4) *Make a scatterplot of hwy vs cyl.*
+2. (Q3)  *What does the 'drv' variable describe?
+        Drive train - 4-wheel, front wheel, rear wheel
+
+3. (Q4) *Make a scatterplot of hwy vs cyl.*
+```{r}
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = hwy, y = cyl))
+```
+
+Not particularly useful - 'cyl' is a ordinal (integer), not continuous (numeric) variable. Could be useful to check for outliers, since higher cylinder numbers have some relationship to lower highway mpg. 
 
 
 #### Workflow: basics Exercises
 
 1. (Q2) *Tweak each of the following R commands so that they run correctly (`library(tidyverse)` is correct):*
 
+Incorrect code with comments on corrections
 ```r
 library(tidyverse)
-ggplot(dota = mpg) + 
+ggplot(dota = mpg) + ###'dota' misspelled, use 'data'
   geom_point(mapping = aes(x = displ, y = hwy))
-fliter(mpg, cyl = 8)
-filter(diamond, carat > 3)
+
+fliter(mpg, cyl = 8) ###'fliter' misspelled, use 'filter'; must use "==" to show "exactly equals"
+filter(diamond, carat > 3) ###No object named 'diamond', should be 'diamonds'
+```
+
+  Corrected code
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+
+filter(mpg, cyl == 8) 
+filter(diamonds, carat > 3)
 ```
 
 ## Google Colab
 
 1. *What are the URLs of your Google Colab notebooks (both Python and R)?*
 
+**Python Notebook**: https://colab.research.google.com/drive/1cW7SgRuS7e620u5TOWpn6JhZB4AVrSeE?usp=sharing
+
+**R Notebook**: https://colab.research.google.com/drive/1_HIXzMb0X4K9QLsUtlck_QzbbXL4xoqq?usp=sharing
+
 ## Tableau
 
 *Insert your the image of your final bar chart here*
 
+![Tableau Chart](TableauChartEastSales.png)
+
 1. *What conclusions can you draw from the chart?*
+
+* Bookcases were not profitable until 2021, and even then they were barely profitable.
+* Copiers have been increasing in profitability.
+* Envelopes, fasteners, and labels are consistently the lowest sellers and are only marginally profitable.
+* Phones had a sharp spike in sales in 2021, but still generate approximately the same amount of profit as in all previous years.
 
 ## Observable and Vega-Lite
 
@@ -80,11 +112,23 @@ filter(diamond, carat > 3)
 
 1. *In the "New York City weather forecast" section, try replacing `Forecast: detailedForecast` with `Forecast: shortForecast`. Then press the blue play button  or use Shift-Return to run your change. What happens?*
 
-1. *Under the scatterplot of temperature vs. name, try replacing `markCircle()` with `markSquare()`. Then press the blue play button  or use Shift-Return to run your change. What happens? How about `markPoint()`?*
+The detailed forecast sentences in the image were removed.
 
-1. *Under "Pick a location, see the weather forecast", pick a location on the map.  Where was the point you picked near?*
+2. *Under the scatterplot of temperature vs. name, try replacing `markCircle()` with `markSquare()`. Then press the blue play button  or use Shift-Return to run your change. What happens? How about `markPoint()`?*
 
-1. *The last visualization on this page is a "fancy" weather chart embedded from another notebook.  Click on the 3 dots next to that chart and choose 'Download PNG'.  Insert the PNG into your report.*
+The command ".mark" is the shape of the points on the scatterplot. ".markSquare" creates square points, and ".markPoint" is a circle outline.  
+
+3. *Under "Pick a location, see the weather forecast", pick a location on the map.  Where was the point you picked near?*
+
+Jersey Village, TX - near my grandparents' house.
+
+4. *The last visualization on this page is a "fancy" weather chart embedded from another notebook.  Click on the 3 dots next to that chart and choose 'Download PNG'.  Insert the PNG into your report.*
+
+![Observable Weather Chart-JV](WeatherChartBlank.png)
+*Cannot download png from Observable notebook - the file saves as an empty file that can't be opened by anything. So far, Google has no useful information. Come back to this Monday morning. In the meantime, screenshot inserted instead.*
+
+![Observable Weather Chart-JV_SS](WeatherChartScreenshot.png)
+
 
 ### Charting with Vega-Lite
 
@@ -115,3 +159,4 @@ Another example, `count()`
 * Reference 1: R Markdown basics, [https://bookdown.org/yihui/rmarkdown/installation.html](https://bookdown.org/yihui/rmarkdown/installation.html)
 * Reference 2: R Markdown Reference guide, [https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
 * Reference 3: R Markdown code chunks, [https://www.dataquest.io/blog/r-markdown-guide-cheatsheet/](https://www.dataquest.io/blog/r-markdown-guide-cheatsheet/)
+* Reference 4: Using R code in a Jupyter notebook, [https://nbviewer.jupyter.org/github/ipython/ipython/blob/1.x/examples/notebooks/Cell%20Magics.ipynb](https://nbviewer.jupyter.org/github/ipython/ipython/blob/1.x/examples/notebooks/Cell%20Magics.ipynb)
